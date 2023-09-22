@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POCServiceBusAndLogs", "POCServiceBusAndLogs\POCServiceBusAndLogs.csproj", "{5A5246B7-F5C7-4F06-BECD-D3F3971F9790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POCServiceBusAndLogs.Logic", "POCServiceBusAndLogs.Logic\POCServiceBusAndLogs.Logic.csproj", "{6306436D-960C-41F1-AB10-17BB87178D93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A5246B7-F5C7-4F06-BECD-D3F3971F9790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5246B7-F5C7-4F06-BECD-D3F3971F9790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5246B7-F5C7-4F06-BECD-D3F3971F9790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5246B7-F5C7-4F06-BECD-D3F3971F9790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6306436D-960C-41F1-AB10-17BB87178D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6306436D-960C-41F1-AB10-17BB87178D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6306436D-960C-41F1-AB10-17BB87178D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6306436D-960C-41F1-AB10-17BB87178D93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9C02599-FA2A-4979-8AC1-DB81854587F6}
+	EndGlobalSection
+EndGlobal
