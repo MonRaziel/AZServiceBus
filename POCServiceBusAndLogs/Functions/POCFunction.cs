@@ -21,7 +21,7 @@ namespace POCServiceBusAndLogs
         }
 
         [FunctionName("POCFunction")]
-        public async Task Process([ServiceBusTrigger("%ServiceBus:DailyTopicName%", "%ServiceBus:RealtimeSubscriptionName%", Connection = "ConnectionStrings:ServiceBusConnectionString", AutoCompleteMessages = false)]
+        public async Task Process([ServiceBusTrigger("%ServiceBus:TopicName1%", "%ServiceBus:SubscriptionName%", Connection = "ConnectionStrings:ServiceBusConnectionString", AutoCompleteMessages = false)]
             ServiceBusReceivedMessage serviceBusReceivedMessage,
             ServiceBusMessageActions messageActions
             )
@@ -34,6 +34,12 @@ namespace POCServiceBusAndLogs
             _processMesagges.ProcessServiceBusMessage(message);
             //if result is ok dequeu the message
             await messageActions.CompleteMessageAsync(serviceBusReceivedMessage);
+
+            //depend on what happen in the process could be different actions
+            /*
+             * await messageActions.AbandonMessageAsync(serviceBusReceivedMessage);
+             * await messageActions.DeadLetterMessageAsync(serviceBusReceivedMessage);
+             */
 
 
             //chatch issues

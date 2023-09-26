@@ -42,6 +42,12 @@ namespace POCServiceBusAndLogs
             var ServiceConfiguration = new POCServiceConfiguration();
             configuration.GetSection(POCServiceConfiguration.ConfigurationSectionName).Bind(ServiceConfiguration);
 
+            var serviceBusConfiguration = new ServiceBusConfiguration();
+            configuration.GetSection(ServiceBusConfiguration.ConfigurationSectionName).Bind(serviceBusConfiguration);
+            serviceBusConfiguration.ServiceBusConnectionString =
+                configuration.GetConnectionString("ServiceBusConnectionString");
+            builder.Services.AddSingleton(serviceBusConfiguration);
+
             builder.Services.AddSingleton(ServiceConfiguration);
             builder.Services.AddLogging(configure => configure.AddSerilog(logger));
             builder.Services.AddApplicationInsightsTelemetry();

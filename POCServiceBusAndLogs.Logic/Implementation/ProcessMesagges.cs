@@ -13,6 +13,7 @@ namespace POCServiceBusAndLogs.Logic.Implementation
         {
             _configuration = configuration;
             _logger = logger;
+            //here we can get from IoC any data access EF or abstractions
         }
         public void ProcessServiceBusMessage(string message)
         {
